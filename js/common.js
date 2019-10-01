@@ -13,16 +13,22 @@ window.addEventListener('load',function(){
     }
 });
 
-/*window.addEventListener('orientationchange', function() {
-    location.reload();
-}, false);*/
+// Find matches
+var mql = window.matchMedia("(orientation: portrait)");
 
-window.addEventListener('orientationchange', function () {
-    var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
-    document.body.style.display='none';
-    setTimeout(function () {
-        document.body.style.display = originalBodyStyle;
-    }, 10);
+// If there are matches, we're in portrait
+if(mql.matches) {
+    // Portrait orientation
+} else {
+    // Landscape orientation
+}
+
+// Add a media query change listener
+mql.addListener(function(m) {
+    if(m.matches) {
+        location.reload();
+    }
+    else {
+        // Changed to landscape
+    }
 });
-
-
