@@ -13,9 +13,16 @@ window.addEventListener('load',function(){
     }
 });
 
+/*window.addEventListener('orientationchange', function() {
+    location.reload();
+}, false);*/
 
-if (window.DeviceOrientationEvent) {
-    window.addEventListener('orientationchange', function() { location.reload(); }, false);
-}
+window.addEventListener('orientationchange', function () {
+    var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
+    document.body.style.display='none';
+    setTimeout(function () {
+        document.body.style.display = originalBodyStyle;
+    }, 10);
+});
 
 
