@@ -456,17 +456,18 @@ ul {
     padding: 0;
   }
   .aside-wrap {
+    overflow: hidden;
+    height: 100%;
     padding: 22px;
   }
   ._show-nav .aside {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+  }
+  ._show-nav .aside .aside-wrap {
     overflow: auto;
   }
-  /*._show-nav .aside .aside-wrap {
-    overflow: auto;
-  }*/
   ._show-nav .aside .h2,
   ._show-nav .aside .text {
     opacity: 1;
