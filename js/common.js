@@ -12,3 +12,9 @@ window.addEventListener('load',function(){
         document.querySelector('body').classList.add("loaded");
     }
 });
+
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+window.addEventListener('resize', function() {
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+}, false);
