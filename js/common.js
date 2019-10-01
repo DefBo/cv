@@ -13,11 +13,10 @@ window.addEventListener('load',function(){
     }
 });
 
-function orientationChange() {
-    if(window.addEventListener) {
-        window.addEventListener("orientationchange", function() {
-            location.reload();
-        });
-    }
-}
-orientationChange();
+window.addEventListener('orientationchange', function () {
+    var originalBodyStyle = getComputedStyle (document.body).getPropertyValue('display');
+    document.body.style.display='none';
+    setTimeout(function () {
+        document.body.style.display = originalBodyStyle;
+    }, 10);
+});
