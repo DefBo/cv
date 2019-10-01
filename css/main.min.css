@@ -213,8 +213,7 @@ template {
 }
 body,
 html {
-  height: 100vh;
-  height: calc(var(--vhrs, 1vh) * 100);
+  height: 100%;
 }
 body {
   font-size: 16px;
@@ -312,8 +311,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
-  height: calc(var(--vhrs, 1vh) * 100);
+  height: 100%;
   overflow: hidden;
 }
 .aside {
@@ -459,8 +457,7 @@ ul {
   }
   .aside-wrap {
     overflow: hidden;
-    height: 100vh;
-    height: calc(var(--vhrs, 1vh) * 100);
+    height: 100%;
     padding: 22px;
   }
   ._show-nav .aside {
