@@ -13,12 +13,6 @@ window.addEventListener('load',function(){
     }
 });
 
-window.addEventListener('orientationchange', function() {
-    location.reload();
-}, false);
-
-
-/*
 function orientationChange() {
     if(window.addEventListener) {
         window.addEventListener("orientationchange", function() {
@@ -27,7 +21,7 @@ function orientationChange() {
     }
 }
 
-orientationChange();*/
+orientationChange();
 
 /*
 window.addEventListener('orientationchange', function () {
