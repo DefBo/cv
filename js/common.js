@@ -14,15 +14,8 @@ window.addEventListener('load',function(){
 });
 
 
-var supportsOrientationChange = "onorientationchange" in window,
-    orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
-
-window.addEventListener(orientationEvent, function() {
-    window.location.reload()
-}, false);
-
-/*if (window.DeviceOrientationEvent) {
+if (window.DeviceOrientationEvent) {
     window.addEventListener('orientationchange', function() { location.reload(); }, false);
-}*/
+}
 
 
