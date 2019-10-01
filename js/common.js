@@ -13,26 +13,4 @@ window.addEventListener('load',function(){
     }
 });
 
-function myOrientResizeFunction(){
-
-    window.location.reload();
-
-}
-
-$(window).resize( function() {
-
-    myOrientResizeFunction()
-
-});
-
-$(window).load( function() {
-
-    myOrientResizeFunction()
-
-});
-
-if (window.DeviceOrientationEvent) {
-
-    window.addEventListener('orientationchange', myOrientResizeFunction, false);
-
-}
+window.onresize = function(){ location.reload(); }
