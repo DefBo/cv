@@ -13,6 +13,11 @@ window.addEventListener('load',function(){
     }
 });
 
-screen.addEventListener("orientationchange", function() {
-    window.location.reload();
-});
+function orientationChange() {
+    if(window.addEventListener) {
+        window.addEventListener("orientationchange", function() {
+            location.reload();
+        });
+    }
+}
+orientationChange();
